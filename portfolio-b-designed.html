@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Ellis — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* THE THREE CHOICES (everything on this page comes from these):
+     1. One typeface family: Space Grotesk, weights 400/500/700
+     2. A grid: 12-column, 72px gutter margins, everything snaps to it
+     3. A two-color palette: ink #14213D and amber #FCA311, plus paper white */
+
+  :root {
+    --ink: #14213D;
+    --amber: #FCA311;
+    --paper: #FFFFFF;
+    --measure: 62ch;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+
+  .grid {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+  }
+
+  /* Header row: name left, contact right, one rule below */
+  header { padding: 40px 0 24px; border-bottom: 3px solid var(--ink); }
+  header .name { grid-column: 1 / 8; font-size: 34px; font-weight: 700; letter-spacing: -0.5px; }
+  header .role { grid-column: 1 / 8; font-size: 15px; font-weight: 500; color: var(--amber); text-transform: uppercase; letter-spacing: 2px; margin-top: 2px; }
+  header .contact { grid-column: 8 / 13; align-self: end; text-align: right; font-size: 15px; }
+  header .contact a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--amber); }
+
+  /* Intro: sits on columns 1-8, generous space above and below */
+  .intro { padding: 56px 0; }
+  .intro p { grid-column: 1 / 9; max-width: var(--measure); font-size: 20px; font-weight: 400; }
+
+  /* Section label: small caps on the amber, left-aligned to the grid */
+  .label {
+    grid-column: 1 / 13;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--amber);
+    padding-bottom: 20px;
+  }
+
+  /* Projects: three equal grid cells, four columns each */
+  .projects { padding-bottom: 64px; }
+  .project { grid-column: span 4; }
+  .project h3 { font-size: 19px; font-weight: 700; padding-bottom: 8px; border-bottom: 2px solid var(--amber); margin-bottom: 12px; }
+  .project p { font-size: 15.5px; margin-bottom: 10px; }
+  .project .learned { font-weight: 500; }
+
+  /* Skills + contact: two blocks sharing one row */
+  .footer-row { padding: 40px 0 64px; border-top: 3px solid var(--ink); }
+  .skills { grid-column: 1 / 8; }
+  .reach { grid-column: 9 / 13; }
+  .footer-row h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--amber); margin-bottom: 12px; }
+  .footer-row p { font-size: 15.5px; }
+  .reach a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--amber); }
+  .updated { grid-column: 1 / 13; font-size: 13px; font-weight: 500; margin-top: 32px; color: var(--ink); }
+
+  @media (max-width: 720px) {
+    header .name, header .role { grid-column: 1 / 13; }
+    header .contact { grid-column: 1 / 13; text-align: left; margin-top: 12px; }
+    .intro p { grid-column: 1 / 13; }
+    .project { grid-column: 1 / 13; margin-bottom: 32px; }
+    .skills, .reach { grid-column: 1 / 13; margin-bottom: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="grid">
+    <div class="name">Jordan Ellis</div>
+    <div class="role">Sophomore &middot; Builder of small tools</div>
+    <div class="contact"><a href="mailto:jellis@example.edu">jellis@example.edu</a></div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="grid">
+    <p>Sophomore. I like building things, mostly small tools that solve one problem at a time. This page collects three projects from this year, what each one does, and what I learned making it.</p>
+  </div>
+</section>
+
+<section class="projects">
+  <div class="grid">
+    <div class="label">Projects</div>
+
+    <div class="project">
+      <h3>Practice Room Scheduler</h3>
+      <p>A sign-up tool for the music wing's four practice rooms. Before this, sign-ups were a paper sheet that disappeared every other week. The tool takes a name and a time slot, blocks double-booking, and posts the day's schedule to a shared screen. Built with Replit and a small database.</p>
+      <p class="learned">What I learned: the hard part was not the code, it was deciding what happens when two people want 3:00.</p>
+    </div>
+
+    <div class="project">
+      <h3>Snow Day Predictor</h3>
+      <p>A page that pulls tomorrow's forecast and computes a snow-day probability from temperature, precipitation, and timing, using six years of past closures I collected from old announcements. It has been right twice and wrong once.</p>
+      <p class="learned">What I learned: a model is only as good as the data you feed it, and six years is not much data.</p>
+    </div>
+
+    <div class="project">
+      <h3>Lunch Line Counter</h3>
+      <p>A tally app the student council used for one week to time the lunch lines. It records a timestamp per person and charts the wait by minute. The data went into a proposal to open the second line ten minutes earlier.</p>
+      <p class="learned">What I learned: nobody argues with a chart of their own cafeteria.</p>
+    </div>
+  </div>
+</section>
+
+<section class="footer-row">
+  <div class="grid">
+    <div class="skills">
+      <h3>Skills</h3>
+      <p>Python, JavaScript, spreadsheets I am not ashamed of, reading documentation before asking, asking anyway when the documentation is wrong.</p>
+    </div>
+    <div class="reach">
+      <h3>Contact</h3>
+      <p>Email <a href="mailto:jellis@example.edu">jellis@example.edu</a> or find me in the robotics room after 3:15.</p>
+    </div>
+    <div class="updated">Last updated September 2026</div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Station 1 — Dieter Rams / Braun</title>
+<style>
+  /* The exhibit obeys the language: near-white, grey, one functional accent, nothing decorative */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: #F2F2F0; color: #1D1D1B; }
+  .rulebar { background: #1D1D1B; color: #F2F2F0; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 40px; display: flex; justify-content: space-between; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 40px; }
+  h1 { font-size: 42px; font-weight: 500; letter-spacing: -0.5px; }
+  .context { font-size: 16px; color: #6B6B68; margin-top: 6px; margin-bottom: 48px; max-width: 60ch; }
+
+  .specimens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 56px; }
+  .specimen { background: #FFFFFF; padding: 32px; display: flex; flex-direction: column; align-items: center; }
+  .specimen .caption { font-size: 13px; color: #6B6B68; margin-top: 24px; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* Specimen A: pocket radio, after the T3 idea — a grid of holes and one dial */
+  .radio { width: 180px; height: 280px; background: #FAFAF8; border: 1px solid #D8D8D4; border-radius: 8px; position: relative; padding: 20px; }
+  .radio .holes { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  .radio .holes span { width: 10px; height: 10px; border-radius: 50%; background: #D8D8D4; }
+  .radio .dial { width: 70px; height: 70px; border-radius: 50%; background: #FFFFFF; border: 1px solid #C4C4C0; position: absolute; bottom: 60px; left: 20px; }
+  .radio .dial::after { content: ""; position: absolute; top: 6px; left: 50%; width: 3px; height: 14px; background: #E8730C; transform: translateX(-50%); }
+  .radio .slider { position: absolute; bottom: 26px; left: 20px; right: 20px; height: 4px; background: #D8D8D4; }
+  .radio .slider::after { content: ""; position: absolute; left: 30%; top: -6px; width: 10px; height: 16px; background: #1D1D1B; }
+
+  /* Specimen B: wall clock — no numbers, just index marks and hands */
+  .clock { width: 220px; height: 220px; border-radius: 50%; background: #FFFFFF; border: 1px solid #D8D8D4; position: relative; }
+  .clock i { position: absolute; top: 50%; left: 50%; width: 2px; height: 104px; transform-origin: top center; }
+  .clock i::before { content: ""; position: absolute; bottom: 0; left: 0; width: 2px; height: 12px; background: #1D1D1B; }
+  .clock .hour { position: absolute; top: 50%; left: 50%; width: 6px; height: 58px; background: #1D1D1B; transform-origin: bottom center; transform: translate(-50%, -100%) rotate(305deg); }
+  .clock .minute { position: absolute; top: 50%; left: 50%; width: 4px; height: 84px; background: #1D1D1B; transform-origin: bottom center; transform: translate(-50%, -100%) rotate(70deg); }
+  .clock .second { position: absolute; top: 50%; left: 50%; width: 2px; height: 92px; background: #E8730C; transform-origin: bottom center; transform: translate(-50%, -100%) rotate(180deg); }
+  .clock .pin { position: absolute; top: 50%; left: 50%; width: 10px; height: 10px; border-radius: 50%; background: #E8730C; transform: translate(-50%, -50%); z-index: 2; }
+
+  /* Specimen C: calculator, after the ET idea — round keys, one colored key that matters */
+  .calc { width: 180px; height: 280px; background: #2A2A28; border-radius: 10px; padding: 18px; }
+  .calc .display { height: 40px; background: #3A3A38; border-radius: 4px; margin-bottom: 18px; color: #C9F24B; font-size: 22px; text-align: right; padding: 8px 10px; font-family: "Courier New", monospace; }
+  .calc .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .calc .keys button { width: 30px; height: 30px; border-radius: 50%; border: none; background: #4A4A48; color: #F2F2F0; font-size: 13px; }
+  .calc .keys button.op { background: #6B6B68; }
+  .calc .keys button.go { background: #E8730C; }
+
+  /* Ten principles card — the one labeled teaching artifact at this station */
+  .card { background: #FFFFFF; padding: 40px; max-width: 720px; }
+  .card h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; }
+  .card .attr { font-size: 14px; color: #6B6B68; margin-bottom: 28px; }
+  .card ol { list-style: none; counter-reset: p; columns: 2; column-gap: 48px; }
+  .card ol li { counter-increment: p; font-size: 17px; padding: 10px 0 10px 44px; position: relative; border-top: 1px solid #E8E8E4; break-inside: avoid; }
+  .card ol li::before { content: counter(p, decimal-leading-zero); position: absolute; left: 0; top: 10px; font-size: 15px; color: #E8730C; }
+  @media (max-width: 720px) { .specimens { grid-template-columns: 1fr; } .card ol { columns: 1; } }
+</style>
+</head>
+<body>
+
+<div class="rulebar"><span>Station 1</span><span>Describe before you judge</span></div>
+
+<div class="wrap">
+  <h1>Dieter Rams / Braun</h1>
+  <p class="context">Dieter Rams ran design at Braun from 1961 to 1995, and across those decades he gave hundreds of unrelated household products, from radios and record players to clocks, calculators, and shelving, a single shared visual logic: neutral surfaces, controls arranged by function, and color reserved for the one element the user needs to find first. The objects below are classroom recreations of his ideas rather than the originals, but the logic they follow is his.</p>
+
+  <div class="specimens">
+    <div class="specimen">
+      <div class="radio">
+        <div class="holes"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="dial"></div>
+        <div class="slider"></div>
+      </div>
+      <div class="caption">Pocket radio, 1958 idea</div>
+    </div>
+    <div class="specimen">
+      <div class="clock">
+        <i style="transform: translate(-50%,0) rotate(0deg)"></i><i style="transform: translate(-50%,0) rotate(30deg)"></i><i style="transform: translate(-50%,0) rotate(60deg)"></i><i style="transform: translate(-50%,0) rotate(90deg)"></i><i style="transform: translate(-50%,0) rotate(120deg)"></i><i style="transform: translate(-50%,0) rotate(150deg)"></i><i style="transform: translate(-50%,0) rotate(180deg)"></i><i style="transform: translate(-50%,0) rotate(210deg)"></i><i style="transform: translate(-50%,0) rotate(240deg)"></i><i style="transform: translate(-50%,0) rotate(270deg)"></i><i style="transform: translate(-50%,0) rotate(300deg)"></i><i style="transform: translate(-50%,0) rotate(330deg)"></i>
+        <div class="hour"></div><div class="minute"></div><div class="second"></div><div class="pin"></div>
+      </div>
+      <div class="caption">Wall clock, no numerals</div>
+    </div>
+    <div class="specimen">
+      <div class="calc">
+        <div class="display">1984</div>
+        <div class="keys">
+          <button>7</button><button>8</button><button>9</button><button class="op">÷</button>
+          <button>4</button><button>5</button><button>6</button><button class="op">×</button>
+          <button>1</button><button>2</button><button>3</button><button class="op">−</button>
+          <button>0</button><button>.</button><button class="go">=</button><button class="op">+</button>
+        </div>
+      </div>
+      <div class="caption">Calculator. What is color used for?</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Ten Principles for Good Design</h2>
+    <div class="attr">Dieter Rams. Condensed; canonical text at Vitsœ.</div>
+    <ol>
+      <li>Good design is innovative</li>
+      <li>Good design makes a product useful</li>
+      <li>Good design is aesthetic</li>
+      <li>Good design makes a product understandable</li>
+      <li>Good design is unobtrusive</li>
+      <li>Good design is honest</li>
+      <li>Good design is long-lasting</li>
+      <li>Good design is thorough, down to the last detail</li>
+      <li>Good design is environmentally friendly</li>
+      <li>Good design is as little design as possible</li>
+    </ol>
+  </div>
+</div>
+
+</body>
+</html>

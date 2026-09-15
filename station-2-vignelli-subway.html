@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Station 2 — Vignelli Subway Program</title>
+<style>
+  /* The exhibit obeys the language: Helvetica, black bar on white, color only for line identity */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Helvetica, "Helvetica Neue", Arial, sans-serif; background: #FFFFFF; color: #000000; }
+  .rulebar { background: #000000; color: #FFFFFF; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 40px; display: flex; justify-content: space-between; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 40px; }
+  h1 { font-size: 42px; font-weight: bold; letter-spacing: -0.5px; }
+  .context { font-size: 16px; color: #555; margin: 6px 0 48px; max-width: 62ch; }
+
+  .caption { font-size: 13px; color: #555; text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 40px; }
+
+  /* Sign specimens: the black bar system */
+  .sign { background: #000000; color: #FFFFFF; padding: 22px 28px; display: flex; align-items: center; gap: 20px; border-top: 6px solid #FFFFFF; }
+  .sign.first { border-top: none; }
+  .sign .station { font-size: 40px; font-weight: bold; letter-spacing: -1px; }
+  .sign .sub { font-size: 20px; font-weight: normal; }
+  .sign .spacer { flex: 1; }
+  .sign .arrow { font-size: 36px; font-weight: bold; }
+
+  .bullet { width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: #FFFFFF; flex-shrink: 0; }
+  .b-red { background: #EE352E; }
+  .b-green { background: #00933C; }
+  .b-yellow { background: #FCCC0A; color: #000000; }
+  .b-blue { background: #0039A6; }
+  .b-orange { background: #FF6319; }
+  .b-purple { background: #B933AD; }
+
+  /* The system table: same bar, different content, to show the rules doing the work */
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 8px; }
+  @media (max-width: 800px) { .pair { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="rulebar"><span>Station 2</span><span>Describe before you judge</span></div>
+
+<div class="wrap">
+  <h1>Vignelli Subway Program</h1>
+  <p class="context">By the late 1960s the New York subway carried decades of accumulated signage that contradicted itself from one station to the next, so the Transit Authority hired Massimo Vignelli and Bob Noorda to design a system that any rider could read at speed. Their 1970 Graphics Standards Manual specified everything: the typeface, the black sign bar, the placement of arrows, and the colored disc that identifies each line. Signs fabricated for the system today are still built from that manual. The signs below are classroom recreations, and every choice on them comes from the same small set of rules. As you read them, consider what color is used for in this language.</p>
+
+  <div class="sign first">
+    <span class="station">Times Sq</span>
+    <span class="sub">42 St</span>
+    <span class="spacer"></span>
+    <span class="bullet b-red">1</span>
+    <span class="bullet b-red">2</span>
+    <span class="bullet b-red">3</span>
+    <span class="bullet b-purple">7</span>
+    <span class="bullet b-yellow">N</span>
+    <span class="bullet b-yellow">Q</span>
+  </div>
+  <div class="caption">Platform sign</div>
+
+  <div class="pair">
+    <div>
+      <div class="sign first">
+        <span class="arrow">&#8592;</span>
+        <span class="bullet b-green">4</span>
+        <span class="bullet b-green">5</span>
+        <span class="sub">Uptown &amp; The Bronx</span>
+      </div>
+      <div class="caption">Directional sign</div>
+    </div>
+    <div>
+      <div class="sign first">
+        <span class="bullet b-blue">A</span>
+        <span class="bullet b-orange">D</span>
+        <span class="sub">Downtown &amp; Brooklyn</span>
+        <span class="spacer"></span>
+        <span class="arrow">&#8594;</span>
+      </div>
+      <div class="caption">Directional sign</div>
+    </div>
+  </div>
+
+  <div class="sign first">
+    <span class="sub" style="font-size:26px;">Exit</span>
+    <span class="spacer"></span>
+    <span class="sub">Broadway &amp; 42 St</span>
+    <span class="arrow">&#8593;</span>
+  </div>
+  <div class="caption">Exit sign</div>
+
+</div>
+
+</body>
+</html>

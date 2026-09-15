@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Station 4 — Art Nouveau</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "EB Garamond", Georgia, serif;
+    background: #F5F0E1;
+    color: #2C2416;
+    line-height: 1.7;
+  }
+  .rulebar { background: #2C2416; color: #D4C8A0; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 40px; display: flex; justify-content: space-between; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 48px 40px; }
+
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: #2C2416;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .vine-divider { display: block; margin: 0 auto 36px; }
+  .context {
+    font-size: 17px;
+    color: #5C4E34;
+    max-width: 62ch;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+  .section-label {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #6F824F;
+    margin: 48px 0 20px;
+    text-align: center;
+  }
+
+  /* Image specimens */
+  .specimens { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 16px; }
+  @media (max-width: 780px) { .specimens { grid-template-columns: 1fr; } }
+  .specimen {
+    background: #FDFAF0;
+    border: 2px solid #B8A77C;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .specimen img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+  }
+  .specimen .info { padding: 20px 24px; }
+  .specimen .info h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #6F824F;
+    margin-bottom: 8px;
+  }
+  .specimen .info p { font-size: 16px; color: #5C4E34; }
+
+  /* Full-width poster specimen */
+  .poster-specimen {
+    background: #FDFAF0;
+    border: 2px solid #B8A77C;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 780px) { .poster-specimen { grid-template-columns: 1fr; } }
+  .poster-specimen img {
+    height: 520px;
+    width: auto;
+    max-width: 360px;
+    object-fit: contain;
+    display: block;
+    background: #EDE8D6;
+    padding: 16px;
+  }
+  @media (max-width: 780px) {
+    .poster-specimen img { height: auto; max-width: 100%; max-height: 480px; margin: 0 auto; }
+  }
+  .poster-specimen .info { padding: 28px 28px; display: flex; flex-direction: column; justify-content: center; }
+  .poster-specimen .info h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #6F824F;
+    margin-bottom: 12px;
+  }
+  .poster-specimen .info p { font-size: 16px; color: #5C4E34; margin-bottom: 14px; }
+
+  /* Palette */
+  .palette { display: flex; gap: 12px; justify-content: center; margin: 24px 0 8px; flex-wrap: wrap; }
+  .swatch {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 2px solid #B8A77C;
+    display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 6px;
+  }
+  .swatch span { font-size: 10px; color: #5C4E34; background: #F5F0E1; padding: 1px 5px; border-radius: 8px; }
+
+  .palette-note {
+    text-align: center;
+    font-size: 16px;
+    color: #5C4E34;
+    max-width: 56ch;
+    margin: 0 auto 12px;
+  }
+
+  .caption {
+    font-size: 12px;
+    color: #8B7D5E;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  /* Image load error fallback */
+  .specimen img, .poster-specimen img {
+    background: #EDE8D6;
+  }
+</style>
+</head>
+<body>
+
+<div class="rulebar"><span>Station 4</span><span>Describe before you judge</span></div>
+
+<div class="wrap">
+  <h1>Art Nouveau</h1>
+
+  <svg class="vine-divider" viewBox="0 0 500 40" width="400" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C60,20 80,6 130,6 S200,28 250,20 S320,4 370,12 S440,28 500,20" stroke="#6F824F" stroke-width="2" fill="none"/>
+    <path d="M110,6 C105,0 95,-4 90,4 C86,10 96,14 110,6Z" fill="#6F824F" opacity="0.5"/>
+    <path d="M250,20 C244,12 234,10 232,18 C230,24 240,26 250,20Z" fill="#6F824F" opacity="0.5"/>
+    <path d="M390,12 C384,4 374,2 372,10 C370,16 380,18 390,12Z" fill="#6F824F" opacity="0.5"/>
+    <circle cx="170" cy="16" r="3" fill="#C2956B"/>
+    <circle cx="310" cy="10" r="3" fill="#C2956B"/>
+    <circle cx="440" cy="22" r="3" fill="#C2956B"/>
+  </svg>
+
+  <p class="context">Art Nouveau emerged across Europe in the 1890s as a deliberate rejection of the industrial world's straight lines and mass-produced repetition. Its practitioners drew their formal vocabulary from plants, insects, and the human body, and insisted that ornament should grow from the structure of an object rather than being applied to its surface afterward. The style governed everything from posters and book covers to entire buildings and transit entrances, and its core conviction was that there should be no boundary between fine art and the designed object.</p>
+
+  <div class="section-label">Architecture</div>
+
+  <div class="specimens">
+    <div class="specimen">
+      <!-- Wikimedia Commons: public domain photograph of Horta's Tassel House stairway -->
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyAnKmsj7U0ydehX6RqXuP8Yge5MiYAJKlaFfrI7LMnWWZnjfB_J-qeNs1&s=10"
+           alt="Interior stairway of the Hôtel Tassel in Brussels, designed by Victor Horta, 1893. Iron railings curve like plant stems; floor mosaics and wall paintings echo the same organic lines."
+           loading="lazy">
+      <div class="info">
+        <h2>Victor Horta, Hôtel Tassel, Brussels, 1893</h2>
+        <p>Generally considered the first Art Nouveau building. The iron staircase column rises like a plant stem, and the railings, floor mosaics, and wall murals all repeat the same curving line vocabulary. Where does the structural ironwork end and the decoration begin?</p>
+      </div>
+    </div>
+    <div class="specimen">
+      <!-- Wikimedia Commons: Iste Praetor, CC BY-SA 3.0 -->
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRCMrpibFdpdgjuxuTeHqCJaK7VIUmnaRO5avd50PzQ&s=10"
+           alt="Hector Guimard's Art Nouveau entrance to the Abbesses Métro station in Paris, with its glass and cast iron canopy shaped like dragonfly wings."
+           loading="lazy">
+      <div class="info">
+        <h2>Hector Guimard, Abbesses Métro entrance, Paris, 1900</h2>
+        <p>Guimard designed 141 Paris Métro entrances between 1900 and 1913, all from the same modular system of cast iron components. The iron uprights function as structural supports for the glass canopy, but they curve and branch like organic forms rather than standing straight. The "Métropolitain" lettering is hand-drawn to match.</p>
+      </div>
+    </div>
+  </div>
+  <div class="caption">Photographs: via Smithsonian Magazine; Heritage Type Co.</div>
+
+  <div class="section-label">The Poster</div>
+
+  <div class="poster-specimen">
+    <!-- Wikimedia Commons: public domain, Mucha died 1939, work from 1897 -->
+    <img src="https://i.shgcdn.com/40491730-f69c-4092-a229-dbd6937eb7bf/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+         alt="Alphonse Mucha, F. Champenois Imprimeur-Éditeur, lithograph poster, 1897. A woman with flowing hair framed by a circular halo, her hair and the decorative border merging into one composition."
+         loading="lazy">
+    <div class="info">
+      <h2>Alphonse Mucha, F. Champenois Imprimeur-Éditeur, 1897</h2>
+      <p>Mucha's posters from the 1890s established many of the conventions that students recognize as Art Nouveau even when they do not know the style by name: a central figure framed by a circular halo, hair and fabric flowing outward until they merge with the decorative border, and a muted palette drawn from natural materials rather than industrial pigments.</p>
+      <p>In Mucha's work the frame, the figure, and the ornament are all part of one continuous composition. The border is not a container placed around the image; it grows out of the image itself. What is background and what is foreground?</p>
+    </div>
+  </div>
+  <div class="caption">Image: Heritage Type Co.</div>
+
+  <div class="section-label">The Palette</div>
+  <p class="palette-note">Art Nouveau's colors come from its subject matter. These are not chosen for contrast or brand identity but derived from the materials the style depicts: leaves, stone, skin, aged metal.</p>
+  <div class="palette">
+    <div class="swatch" style="background:#6F824F;"><span>olive</span></div>
+    <div class="swatch" style="background:#C2956B;"><span>copper</span></div>
+    <div class="swatch" style="background:#F5F0E1; border-color:#B8A77C;"><span>cream</span></div>
+    <div class="swatch" style="background:#2C2416;"><span style="color:#D4C8A0; background:#2C2416;">umber</span></div>
+    <div class="swatch" style="background:#B8A77C;"><span>brass</span></div>
+    <div class="swatch" style="background:#E8D5BC;"><span>parchment</span></div>
+  </div>
+
+</div>
+
+</body>
+</html>

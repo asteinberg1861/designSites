@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Station 3 — Google Material Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* The exhibit obeys the language: Roboto, elevation shadows, 8dp spacing rhythm, stated color roles */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Roboto, Arial, sans-serif; background: #FEF7FF; color: #1D1B20; }
+  .rulebar { background: #6750A4; color: #FFFFFF; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 40px; display: flex; justify-content: space-between; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 40px; }
+  h1 { font-size: 42px; font-weight: 400; }
+  .context { font-size: 16px; color: #49454F; margin: 6px 0 48px; max-width: 62ch; }
+  h2 { font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: #6750A4; margin: 40px 0 16px; }
+
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 800px) { .row { grid-template-columns: 1fr; } }
+
+  /* Cards at three elevations */
+  .mcard { background: #FFFFFF; border-radius: 12px; padding: 16px; }
+  .e1 { box-shadow: 0 1px 2px rgba(0,0,0,.3), 0 1px 3px 1px rgba(0,0,0,.15); }
+  .e3 { box-shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 8px 3px rgba(0,0,0,.15); }
+  .e5 { box-shadow: 0 4px 4px rgba(0,0,0,.3), 0 8px 12px 6px rgba(0,0,0,.15); }
+  .mcard .title { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+  .mcard .body { font-size: 14px; color: #49454F; }
+
+  /* Buttons: one shape system, roles by fill */
+  .buttons { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn { border: none; border-radius: 20px; padding: 10px 24px; font-family: Roboto, sans-serif; font-size: 14px; font-weight: 500; }
+  .filled { background: #6750A4; color: #FFFFFF; }
+  .tonal { background: #E8DEF8; color: #1D1B20; }
+  .outlined { background: transparent; color: #6750A4; border: 1px solid #79747E; }
+  .fab { width: 56px; height: 56px; border-radius: 16px; border: none; background: #EADDFF; color: #21005D; font-size: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 8px 3px rgba(0,0,0,.15); }
+
+  /* Color roles: color as a named system, not a mood */
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  @media (max-width: 800px) { .chips { grid-template-columns: repeat(2, 1fr); } }
+  .chip { border-radius: 12px; padding: 14px; font-size: 13px; font-weight: 500; height: 84px; }
+  .c1 { background: #6750A4; color: #FFFFFF; }
+  .c2 { background: #EADDFF; color: #21005D; }
+  .c3 { background: #B3261E; color: #FFFFFF; }
+  .c4 { background: #E7E0EC; color: #49454F; }
+
+  /* The spec-page signature: a do/don't pair */
+  .dodont { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 800px) { .dodont { grid-template-columns: 1fr; } }
+  .panel { background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.3), 0 1px 3px 1px rgba(0,0,0,.15); }
+  .panel .demo { padding: 24px; display: flex; gap: 12px; justify-content: center; background: #F7F2FA; }
+  .panel .verdict { padding: 12px 16px; font-size: 14px; font-weight: 500; }
+  .do .verdict { color: #146C2E; border-top: 4px solid #146C2E; }
+  .dont .verdict { color: #B3261E; border-top: 4px solid #B3261E; }
+  .btn.wrong1 { border-radius: 2px; background: #FF6319; color: #fff; }
+  .btn.wrong2 { border-radius: 30px 0 30px 0; background: #00933C; color: #fff; font-family: Georgia, serif; }
+</style>
+</head>
+<body>
+
+<div class="rulebar"><span>Station 3</span><span>Describe before you judge</span></div>
+
+<div class="wrap">
+  <h1>Google Material Design</h1>
+  <p class="context">Google published Material Design in 2014 and has revised it continuously since, currently as Material 3. It is a design language written down as a public specification, complete with measurements, motion curves, and worked examples, so that thousands of apps built by different companies on different continents can follow one rulebook and still feel like they belong to the same world. The components below are recreations of what the spec pages show.</p>
+
+  <h2>Elevation</h2>
+  <div class="row">
+    <div class="mcard e1"><div class="title">Level 1</div><div class="body">Resting card.</div></div>
+    <div class="mcard e3"><div class="title">Level 3</div><div class="body">Raised. Same card, same corner radius.</div></div>
+    <div class="mcard e5"><div class="title">Level 5</div><div class="body">Lifted, as when dragged. What changed between these three?</div></div>
+  </div>
+
+  <h2>Buttons</h2>
+  <div class="buttons">
+    <button class="btn filled">Save changes</button>
+    <button class="btn tonal">Preview</button>
+    <button class="btn outlined">Cancel</button>
+    <button class="fab">+</button>
+  </div>
+
+  <h2>Color roles. How are colors named here?</h2>
+  <div class="chips">
+    <div class="chip c1">Primary</div>
+    <div class="chip c2">Primary container</div>
+    <div class="chip c3">Error</div>
+    <div class="chip c4">Surface variant</div>
+  </div>
+
+  <h2>Do and don't examples</h2>
+  <div class="dodont">
+    <div class="panel do">
+      <div class="demo"><button class="btn filled">Save changes</button><button class="btn outlined">Cancel</button></div>
+      <div class="verdict">Do: one primary action, matching shapes, colors from the system</div>
+    </div>
+    <div class="panel dont">
+      <div class="demo"><button class="btn wrong1">SAVE!!</button><button class="btn wrong2">Cancel</button></div>
+      <div class="verdict">Don't: mixed shapes, off-system colors, no clear primary action</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
