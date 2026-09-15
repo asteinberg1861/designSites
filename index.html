@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sophomore Seminar — Design Sites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #666;
+    --rule: #e0e0e0;
+    --link: #1a4d8f;
+    --bg: #fdfdfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Overpass', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+    padding: 3rem 1.25rem 4rem;
+    line-height: 1.55;
+  }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 .35rem;
+    letter-spacing: -.01em;
+  }
+  .sub {
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    font-size: .95rem;
+  }
+  h2 {
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+    margin: 2.5rem 0 .75rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { border-bottom: 1px solid var(--rule); }
+  a {
+    display: block;
+    padding: .85rem .25rem;
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  a:hover, a:focus { background: #f2f2ef; text-decoration: underline; }
+  a .note {
+    display: block;
+    font-weight: 400;
+    font-size: .875rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Sophomore Seminar — Design Sites</h1>
+  <p class="sub">Design stations and portfolio pages.</p>
+
+  <h2>Stations</h2>
+  <ul>
+    <li><a href="station-1-rams-braun.html">Station 1: Rams &amp; Braun
+      <span class="note">Functional minimalism</span></a></li>
+    <li><a href="station-2-vignelli-subway.html">Station 2: Vignelli &amp; the Subway Map
+      <span class="note">Systems and wayfinding</span></a></li>
+    <li><a href="station-3-material-design.html">Station 3: Material Design
+      <span class="note">Design systems at scale</span></a></li>
+    <li><a href="station-4-art-nouveau%20(2).html">Station 4: Art Nouveau
+      <span class="note">Ornament and organic form</span></a></li>
+  </ul>
+
+  <h2>Portfolio Comparison</h2>
+  <ul>
+    <li><a href="portfolio-a-default.html">Portfolio A: Default
+      <span class="note">Unstyled baseline</span></a></li>
+    <li><a href="portfolio-b-designed.html">Portfolio B: Designed
+      <span class="note">Same content, design applied</span></a></li>
+  </ul>
+
+</main>
+</body>
+</html>
